@@ -40,6 +40,10 @@ function sen_render_options_page() {
         <h2><?php esc_html_e('Log', 'ssl-expiration-notifier'); ?></h2>
         <?php echo '<p>' . __('You can view recorded logs.', 'ssl-expiration-notifier') . '</p>'; ?>
         <?php sen_render_log_field(); ?>
+        <div>
+            <?php echo '<p>' . __('If you like this plugin, you can support me!', 'ssl-expiration-notifier') . '</p>'; ?>
+            <a href="https://www.buymeacoffee.com/emreece"><img src="https://img.buymeacoffee.com/button-api/?text=Support Me!&emoji=😇&slug=emreece&button_colour=FFDD00&font_colour=000000&font_family=Poppins&outline_colour=000000&coffee_colour=ffffff" /></a>
+        </div>
     </div>
     <?php
 }
@@ -74,7 +78,6 @@ function sen_plugin_init() {
     add_action('admin_menu', 'sen_options_page');
     add_action('admin_init', 'sen_setup_settings');
 
-    // SSL sertifikası kontrolü için günlük bir cron işlemi oluştur
     if (!wp_next_scheduled('sen_check_ssl_cert')) {
         wp_schedule_event(time(), 'daily', 'sen_check_ssl_cert');
     }
