@@ -28,4 +28,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support
 
-For support or feature requests, please [open an issue](https://github.com/yourusername/ssl-expiration-notifier/issues).
+For support or feature requests, please [open an issue](https://github.com/eece/ssl-expiration-notifier/issues).
